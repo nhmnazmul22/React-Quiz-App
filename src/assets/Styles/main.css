@@ -74,6 +74,27 @@ img {
 .link:hover {
   color: var(--blue-color);
 }
+.iconBox {
+  margin-right: 0.8rem;
+}
+.info {
+  margin: 1.5rem 0;
+}
+.info p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--black-color);
+}
+.info p a {
+  margin-left: 0.5rem;
+}
+.btnBox {
+  display: inline-block;
+  margin-top: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
 .btn {
   font-size: 1.3rem;
   font-weight: 600;

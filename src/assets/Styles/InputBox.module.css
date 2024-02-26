@@ -1,0 +1,27 @@
+.inputBox {
+  text-align: center;
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+.inputBox .input {
+  width: 85%;
+}
+.inputBox .input input {
+  font-family: "Ubuntu", sans-serif;
+  padding: 1rem 1rem;
+  width: 100%;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  position: relative;
+}
+.inputBox input::placeholder {
+  color: #bfbfbf;
+  font-weight: 500;
+}
+

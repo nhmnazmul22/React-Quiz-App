@@ -3,7 +3,7 @@ import classes from "../assets/Styles/navbar.module.css";
 export default function Account() {
   return (
     <div className={classes.loginSingupBox}>
-      <div className={classes.iconBox}>
+      <div className="iconBox">
         <span className="material-symbols-outlined">account_circle</span>
       </div>
       <p>
