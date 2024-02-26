@@ -1,0 +1,35 @@
+.illustration-box {
+  width: fit-content;
+  margin: 0 auto;
+}
+.score-box h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 25px;
+}
+.quiz-result .row {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 615px) {
+  .quiz-result .row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .score-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+  }
+  .quiz-score {
+    margin-bottom: 3rem;
+  }
+  .quiz-score .row {
+    gap: 4rem;
+  }
+  .quiz-score .row:first-child {
+    order: 2;
+  }
+}

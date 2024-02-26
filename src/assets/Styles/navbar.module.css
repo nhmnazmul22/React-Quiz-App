@@ -1,0 +1,24 @@
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.loginSingupBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.logo > h1 > a {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--black-color);
+  cursor: pointer;
+}
+.logo > h1 > a > span {
+  color: var(--blue-color);
+}
+.iconBox {
+  margin-right: 0.8rem;
+}
