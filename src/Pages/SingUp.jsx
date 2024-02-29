@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom";
 import Button from "../Components/Button";
+import Checkbox from "../Components/Checkbox";
 import From from "../Components/From";
 import Illustration from "../Components/Illustration";
 import InputBox from "../Components/InputBox";
+import img from "../assets/Img/sing-up.svg";
 export default function SingUp() {
   return (
     <>
       <h2 className="main-title">Sing Up Today</h2>
       <div className="row">
         <div className="colum">
-          <Illustration />
+          <Illustration img={img} />
         </div>
         <div className="colum">
           <From>
@@ -21,13 +24,14 @@ export default function SingUp() {
               placeholder="Confirme Password"
               icon="thumb_up"
             />
+            <Checkbox text="I agree all trems and Conditions" />
             <Button text={"Sing Up"} />
             <div className="info">
               <p>
                 Already have a account please
-                <a href="./login.html" className="link">
+                <Link to="/login" className="link">
                   Loing Now
-                </a>
+                </Link>
               </p>
             </div>
           </From>

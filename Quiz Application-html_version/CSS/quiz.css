@@ -35,10 +35,10 @@
   margin-left: 1rem;
 }
 .answers-box .red {
-  background: #ff8181;
+  background: var(--danger-color);
 }
 .answers-box .green {
-  background: #8bd281;
+  background: var(--green-color);
   color: var(--black-color);
 }
 
@@ -66,21 +66,19 @@
   width: 30%;
   height: 100%;
   background: #8bd281;
+  position: relative;
 }
-
-.video-play {
+.prgress::before {
+  content: "";
+  display: block;
   position: absolute;
-  bottom: 85px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
+  top: 50%;
+  right: 0;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: var(--black-color);
-  transition: background 0.3s ease;
-  cursor: pointer;
-}
-.video-play:hover {
   background: #8bd281;
+  transform: translateY(-50%);
 }
 @media (max-width: 556px) {
   .progress-box {
@@ -89,9 +87,5 @@
   .progress-bar {
     order: -1;
     width: 100%;
-  }
-  .video-play {
-    bottom: 135px;
-    right: 5px;
   }
 }

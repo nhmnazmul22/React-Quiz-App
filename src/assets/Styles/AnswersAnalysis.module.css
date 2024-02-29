@@ -1,0 +1,33 @@
+.answersContainer .row {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.answersContainer {
+  background: var(--white-color);
+  padding: 1rem;
+  margin: 2rem 0rem;
+  border-radius: 10px;
+}
+.question {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.question .iconBox {
+  width: 25px;
+  height: 25px;
+  background: #8bd281;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+.iconBox span {
+  font-size: 1.3rem;
+  color: var(--white-color);
+}
+.question p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}

@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import classes from "../assets/Styles/navbar.module.css";
-
 export default function Account() {
   return (
     <div className={classes.loginSingupBox}>
@@ -7,9 +7,14 @@ export default function Account() {
         <span className="material-symbols-outlined">account_circle</span>
       </div>
       <p>
-        <a href="singUp.html" className="link">
+        <Link to="singUp" className="link">
           Sing Up
-        </a>
+        </Link>
+      </p>
+      <p>
+        <Link to="login" className="link">
+          Login
+        </Link>
       </p>
     </div>
   );

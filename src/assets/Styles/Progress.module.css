@@ -1,0 +1,60 @@
+.progressBox {
+  min-width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+  gap: 1rem;
+}
+
+.buttonBox .btn {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white-color);
+  background: var(--blue-color);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+.btn:hover {
+  background: var(--light-blue-color);
+}
+.buttonBox .btn a {
+  color: var(--white-color);
+}
+.progressBar {
+  width: 70%;
+  height: 4px;
+  background: #e8ebec;
+  border-radius: 5px;
+}
+.progress {
+  width: 30%;
+  height: 100%;
+  background: #8bd281;
+  position: relative;
+}
+.progress::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #8bd281;
+  transform: translateY(-50%);
+}
+@media (max-width: 556px) {
+  .progressBox {
+    flex-direction: column;
+  }
+  .progressBar {
+    order: -1;
+    width: 100%;
+  }
+}

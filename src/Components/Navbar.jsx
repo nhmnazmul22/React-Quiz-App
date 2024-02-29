@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classes from "../assets/Styles/navbar.module.css";
 import Account from "./Account";
 
@@ -6,9 +7,9 @@ export default function Navbar() {
     <div className={classes.navContent}>
       <div className={classes.logo}>
         <h1>
-          <a href="index.html">
+          <Link to="/">
             <span>React</span> Quiz App
-          </a>
+          </Link>
         </h1>
       </div>
       <Account />

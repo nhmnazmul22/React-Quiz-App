@@ -11,6 +11,8 @@
   --black-color: #264653;
   --white-color: #ffffff;
   --blue-color: #56aff3d2;
+  --danger-color: #ff9595;
+  --green-color: #8bd281;
   --light-blue-color: #76c2fcd2;
   --gray-white-color: #f5f5f5;
   --dark-orange-color: #e76f51;
@@ -37,7 +39,17 @@ img {
   width: 100%;
   display: block;
 }
-
+label {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem 0;
+}
+label p {
+  font-size: 1.2rem;
+  margin-left: 1.2rem;
+}
 .material-symbols-outlined {
   cursor: pointer;
 }
@@ -69,10 +81,15 @@ img {
   font-weight: 600;
   color: var(--black-color);
   cursor: pointer;
+  margin-right: 0.5rem;
   transition: color 0.1s ease;
 }
 .link:hover {
   color: var(--blue-color);
+}
+.fromBox {
+  width: 80%;
+  margin: 0 auto;
 }
 .iconBox {
   margin-right: 0.8rem;

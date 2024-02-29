@@ -10,13 +10,12 @@
   justify-content: flex-start;
   align-items: center;
 }
-.logo > h1 > a {
+.logo h1 a {
   font-size: 2rem;
   font-weight: 600;
   color: var(--black-color);
   cursor: pointer;
 }
-.logo > h1 > a > span {
+.logo h1 a span {
   color: var(--blue-color);
 }
-

@@ -8,8 +8,38 @@
   font-weight: 600;
   line-height: 25px;
 }
-.quiz-result .row {
+
+.answersContainer .row {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.answersContainer {
+  background: var(--white-color);
+  padding: 1rem;
+  margin: 2rem 0rem;
+  border-radius: 10px;
+}
+.question {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.question .icon-box {
+  width: 25px;
+  height: 25px;
+  background: #8bd281;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.icon-box span {
+  font-size: 1.3rem;
+  color: var(--white-color);
+}
+.question p {
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 @media (max-width: 615px) {
