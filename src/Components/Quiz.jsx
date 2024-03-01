@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import img from "../assets/Img/Quiz-banners/1.png";
 import classes from "../assets/Styles/Quiz.module.css";
 export default function Quiz() {
@@ -6,17 +5,15 @@ export default function Quiz() {
     <div className="colum">
       <div className={classes.quizBox}>
         <div className={classes.banner}>
-          <Link to="/quiz">
+          <div>
             <img src={img} alt="Quiz 01" />
-          </Link>
+          </div>
         </div>
         <div className={classes.quizContent}>
           <div className={classes.quizTitle}>
             <h3>
-              <Link to="/quiz" className="tag">
-                #1
-              </Link>{" "}
-              React App Quiz 01 || Nhm Develop Solution
+              <span className="tag">#1</span> React App Quiz 01 || Nhm Develop
+              Solution
             </h3>
           </div>
           <div className={classes.qtInfoBox}>
