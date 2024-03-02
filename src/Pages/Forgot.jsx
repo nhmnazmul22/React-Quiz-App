@@ -1,7 +1,5 @@
-import Button from "../Components/Button";
-import From from "../Components/From";
+import ForgotFrom from "../Components/ForgotFrom";
 import Illustration from "../Components/Illustration";
-import InputBox from "../Components/InputBox";
 import img from "../assets/Img/Qustion.svg";
 
 export default function Login() {
@@ -13,14 +11,7 @@ export default function Login() {
           <Illustration img={img} />
         </div>
         <div className="colum">
-          <From>
-            <InputBox type="email" placeholder="Email Address" icon="mail" />
-            <InputBox type="text" placeholder="OTP" icon="lock" />
-            <Button text="Send" />
-            <div className="info">
-              <p>Please Check Your Mail for OTP Code</p>
-            </div>
-          </From>
+          <ForgotFrom />
         </div>
       </div>
     </>

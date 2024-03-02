@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
-export default function Button({ text }) {
+export default function Button({ type, text, ...rest }) {
   return (
     <div className="btnBox">
-      <Link to="/" className="btn">
+      <button type={type} {...rest} className="btn">
         {text}
-      </Link>
+      </button>
     </div>
   );
 }

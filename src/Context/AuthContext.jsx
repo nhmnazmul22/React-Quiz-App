@@ -2,19 +2,21 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signOut,
   updateProfile,
 } from "firebase/auth";
 import React, { useContext, useEffect, useState } from "react";
-import "../config/firebase";
+import "../firebase";
 const AuthContext = React.createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAuth() {
   return useContext(AuthContext);
 }
 
-export function AuthProvider({ childern }) {
+export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [currentUser, setCurrentUser] = useState();
 
@@ -28,9 +30,8 @@ export function AuthProvider({ childern }) {
   }, []);
 
   //Singup Functionlaity
-  async function singUp(email, password, username) {
+  async function singUp(username, email, password) {
     const auth = getAuth();
-    console.log(auth);
     await createUserWithEmailAndPassword(auth, email, password);
 
     // update user profile
@@ -44,14 +45,19 @@ export function AuthProvider({ childern }) {
     });
   }
   // login function
-  function login(email, password) {
+  async function login(email, password) {
     const auth = getAuth();
     return signInWithEmailAndPassword(auth, email, password);
   }
   // Logout function
-  function logout() {
+  async function logout() {
     const auth = getAuth();
     return signOut(auth);
+  }
+  // forgot Password Function
+  async function forgotPassword(email) {
+    const auth = getAuth();
+    return sendPasswordResetEmail(auth, email);
   }
 
   const value = {
@@ -59,10 +65,11 @@ export function AuthProvider({ childern }) {
     singUp,
     login,
     logout,
+    forgotPassword,
   };
   return (
     <AuthContext.Provider value={value}>
-      {!loading && childern}
+      {!loading && children}
     </AuthContext.Provider>
   );
 }

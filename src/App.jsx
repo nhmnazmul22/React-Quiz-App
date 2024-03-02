@@ -7,18 +7,25 @@ import Login from "./Pages/Login";
 import Question from "./Pages/Question";
 import Result from "./Pages/Result";
 import Singup from "./Pages/SingUp";
+import PrivateOutlet from "./Routes/privateOutlet";
+import PublicOutlet from "./Routes/publicOutlet";
 import "./assets/Styles/main.css";
+
 function App() {
   return (
     <AuthProvider>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/singUp" element={<Singup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/forget" element={<Forgot />} />
-          <Route path="/quiz" element={<Question />} />
-          <Route path="/result" element={<Result />} />
+          <Route path="/" element={<PublicOutlet />}>
+            <Route path="/singUp" element={<Singup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forget" element={<Forgot />} />
+          </Route>
+          <Route path="/" element={<PrivateOutlet />}>
+            <Route path="/quiz" element={<Question />} />
+            <Route path="/result" element={<Result />} />
+          </Route>
         </Routes>
       </Layout>
     </AuthProvider>
