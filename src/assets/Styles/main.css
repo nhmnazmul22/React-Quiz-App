@@ -141,3 +141,22 @@ label p {
   margin: 0 0.5rem 0 0;
   font-size: 1.3rem;
 }
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  background: var;
+  background: var(--light-blue-color);
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 600;
+  width: 250px;
+  height: 80px;
+  border-radius: 50px;
+  text-align: center;
+  margin: 0 auto;
+}
+.quizContainer {
+  margin-bottom: 4rem;
+}

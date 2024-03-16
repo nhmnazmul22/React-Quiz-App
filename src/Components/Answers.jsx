@@ -1,25 +1,20 @@
 import classes from "../assets/Styles/Answers.module.css";
 import Checkbox from "./Checkbox";
-export default function Answers() {
+export default function Answers({ options, handleChange }) {
   return (
-    <div className="row">
-      <div className="colum">
-        <div className={classes.answersBox}>
-          <Checkbox className={classes.checkbox} text="A New Hope 1" />
-          <Checkbox className={classes.checkbox} text="A New Hope 1" />
-          <Checkbox className={classes.checkbox} text="A New Hope 1" />
-          <Checkbox className={classes.checkbox} text="A New Hope 1" />
-          <Checkbox className={classes.checkbox} text="A New Hope 1" />
-        </div>
-      </div>
-      <div className="colum">
-        <div className={classes.answersBox}>
-          <Checkbox className={classes.checkbox} text="A New Hope 1" />
-          <Checkbox className={classes.checkbox} text="A New Hope 1" />
-          <Checkbox className={classes.checkbox} text="A New Hope 1" />
-          <Checkbox className={classes.checkbox} text="A New Hope 1" />
-          <Checkbox className={classes.checkbox} text="A New Hope 1" />
-        </div>
+    <div className={`${classes.answersBox}`}>
+      <div className={classes.colum}>
+        {options.map((option, index) => {
+          return (
+            <Checkbox
+              key={index}
+              text={option.title}
+              value={index}
+              checked={option.checked}
+              onChange={(e) => handleChange(e, index)}
+            />
+          );
+        })}
       </div>
     </div>
   );
