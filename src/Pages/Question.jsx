@@ -1,7 +1,7 @@
 import { getDatabase, ref, set } from "firebase/database";
 import _ from "lodash";
 import { useEffect, useReducer, useState } from "react";
-import { useNavigation, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Answers from "../Components/Answers";
 import Progress from "../Components/Progress";
 import { useAuth } from "../Context/AuthContext";
@@ -35,7 +35,7 @@ export default function Question() {
   const [currentQustion, setCurrentQuestion] = useState(0);
   const [qna, dispatch] = useReducer(reducer, intialstate);
   const { currentUser } = useAuth();
-  const navigation = useNavigation();
+  const history = useNavigate();
 
   useEffect(() => {
     dispatch({
@@ -74,7 +74,8 @@ export default function Question() {
     await set(resultRef, {
       [id]: qna,
     });
-    console.log(navigation);
+
+    history(`/result/${id}`, qna);
   };
   const persentage =
     questions.length > 0 ? ((currentQustion + 1) / questions.length) * 100 : 0;
